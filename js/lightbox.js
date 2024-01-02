@@ -1,33 +1,33 @@
 //TODO ============================   ADD IMG   ============================================
-// const button1 = document.querySelector('.lightbox-image');
-// button1.onclick = () => {
-//   const instance = basicLightbox.create(
-//     '<img style="width: auto; height: auto" src="../images/nature.jpeg">',
-//   );
-
-//   document.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape') {
-//       instance.close();
-//       button1.style.border = 'none';
-//     }
-//   });
-
-//   instance.show();
-// };
-
 const button1 = document.querySelector('.lightbox-image');
 button1.onclick = () => {
-  const img =
-    '<img style="width: 100vw; height: 100vh" src="../images/nature.jpeg">';
   const instance = basicLightbox.create(
-    '<button style="position: absolute; z-index:100, top:5" type="button">hhhhhhh</button>',
+    '<img style="width: auto; height: auto" src="../images/nature.jpeg">',
   );
-  instance.element().insertAdjacentHTML('afterbegin', img);
-  instance.element().querySelector('button').onclick = () => instance.close();
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      instance.close();
+      button1.style.border = 'none';
+    }
+  });
+
   instance.show();
-  const close = instance.element().querySelector('img');
-  instance.onclick().close();
 };
+
+// const button1 = document.querySelector('.lightbox-image');
+// button1.onclick = () => {
+//   const img =
+//     '<img style="width: 100vw; height: 100vh" src="../images/nature.jpeg">';
+//   const instance = basicLightbox.create(
+//     '<button style="position: absolute; z-index:100, top:5" type="button">hhhhhhh</button>',
+//   );
+//   instance.element().insertAdjacentHTML('afterbegin', img);
+//   instance.element().querySelector('button').onclick = () => instance.close();
+//   instance.show();
+//   const close = instance.element().querySelector('img');
+//   instance.onclick().close();
+// };
 
 //TODO ============================   ADD VIDEO   ============================================
 const button2 = document.querySelector('.lightbox-iframe');
