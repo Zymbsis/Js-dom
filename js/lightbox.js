@@ -18,7 +18,7 @@ button1.onclick = () => {
 // const button1 = document.querySelector('.lightbox-image');
 // button1.onclick = () => {
 //   const img =
-//     '<img style="width: 100vw; height: 100vh" src="../images/nature.jpeg">';
+//     '<img style="width: 100vw; height: 100vh" src="./images/nature.jpeg">';
 //   const instance = basicLightbox.create(
 //     '<button style="position: absolute; z-index:100, top:5" type="button">hhhhhhh</button>',
 //   );
@@ -107,14 +107,23 @@ button7.onclick = () => {
   const html = `
 		<h1 style="text-align:center; color:#fff">Not closable</h1>
 		<p style="text-align:center; color:#fff">It's not possible to close this lightbox with a click.</p>
-    <img style="width: auto; height: auto" src="../images/nature.jpeg">
 	`;
-
-  basicLightbox
-    .create(html, {
-      closable: false,
-    })
-    .show();
+  const instance = basicLightbox.create(html, {
+    closable: false,
+  });
+  instance
+    .element()
+    .insertAdjacentHTML(
+      'afterbegin',
+      '<img style="width: auto; height: auto; margin-right:10px" src="./images/nature.jpeg">',
+    );
+  instance
+    .element()
+    .insertAdjacentHTML(
+      'beforeend',
+      '<img style="width: auto; height: auto; margin-left:10px" src="./images/nature.jpeg">',
+    );
+  instance.show();
 };
 
 //TODO ============================   ADD MODIFY   ============================================
@@ -130,13 +139,13 @@ button8.onclick = () => {
     .element()
     .insertAdjacentHTML(
       'afterbegin',
-      '<img style="width: auto; height: auto; margin-right:10px" src="../images/nature.jpeg">',
+      '<img style="width: auto; height: auto; margin-right:10px" src="./images/nature.jpeg">',
     );
   instance
     .element()
     .insertAdjacentHTML(
       'beforeend',
-      '<img style="width: auto; height: auto; margin-left:10px" src="../images/nature.jpeg">',
+      '<img style="width: auto; height: auto; margin-left:10px" src="./images/nature.jpeg">',
     );
 
   instance.show();
