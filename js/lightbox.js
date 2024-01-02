@@ -2,7 +2,7 @@
 const button1 = document.querySelector('.lightbox-image');
 button1.onclick = () => {
   const instance = basicLightbox.create(
-    '<img style="width: auto; height: auto" src="/images/nature.jpeg">',
+    '<img style="width: auto; height: auto" src="../images/nature.jpeg">',
   );
 
   document.addEventListener('keydown', (e) => {
