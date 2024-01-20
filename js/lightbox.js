@@ -177,3 +177,10 @@ button10.onclick = () => {
   instance.element().querySelector('button').onclick = () => instance.close();
   instance.show();
 };
+
+const newElem = (tagName) => document.createElement(tagName);
+
+const html = newElem('div');
+console.log(html);
+html.append(newElem('h1'), newElem('h2'), newElem('p'));
+document.querySelector('.lightbox-button-wrap').after(html);

@@ -1116,3 +1116,81 @@ input[type="checkbox"]:checked + .modal-label-checkbox > .check-span {
     padding-right: 24px;
   }
 }
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.link-container a {
+  display: block
+}
+
+.set-timeout {
+  width: 330px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+.set-timeout .btn {
+  display: block;
+  height: 35px;
+  width: 150px;
+  border: none;
+  color: #fff;
+  background-color: #26a69a;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.set-timeout input {
+  display: block;
+  height: 25px;
+  width: 75px;
+  outline: transparent;
+  border: 1px solid #26a69a;
+  border-radius: 4px;
+}
+
+.big-div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #26a69a;
+  margin: 0 auto;
+  position: relative;
+}
+
+.small-div {
+  width: 50px;
+  height: 50px;
+  background-color: #26a69a;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.small-div-top-right {
+  left: unset;
+  right: 0;
+  background-color: #404BBF;
+}
+
+.small-div-bottom-right {
+  top: unset;
+  bottom: 0;
+  background-color: #26a69a;
+}
+
+.small-div-bottom-left {
+  right: unset;
+  left: 0;
+  background-color: #404BBF;
+}
