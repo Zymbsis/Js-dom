@@ -36,4 +36,3 @@ function set() {
 }
 set();
 setInterval(set, 4000);
-console.log('I love Lyosha');
